@@ -1,14 +1,19 @@
 (function () {
 	var Spent = function () {
 
+		var storageName = 'ffos-espent-userdata',
+			currentData = JSON.parse(localStorage.getItem(storageName) || '[]');
+
 		function validate (data) {
 			return data.howmuch ? true : false;
 		}
 
-		this.save = function (obj, cb) {
-			var storageName = 'ffos-espent-userdata',
-				currentData = JSON.parse(localStorage.getItem(storageName) || '[]');
+		this.getReport = function () {
+			var data = localStorage.getItem(storageName);
 
+		};
+
+		this.save = function (obj, cb) {
 			if (validate(obj)) {
 				currentData.push(obj);
 				localStorage.setItem(storageName, JSON.stringify(currentData));
@@ -39,6 +44,10 @@
 		}, function (status) {
 			document.querySelector('#form-user').reset();
 		});
+	});
+
+	document.querySelector('#report').addEventListener('click', function () {
+		document.querySelector('#report-content').innerHTML = new Spent().getReport();
 	});
 
 }());
