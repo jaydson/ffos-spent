@@ -35,9 +35,9 @@
 			})(),
 			notes : document.querySelector('#notes').value,
 			date : date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear(),
-			exported : false
+			exported : false	
 		}, function (status) {
-			window.close();
+			document.querySelector('#form-user').reset();
 		});
 	});
 
