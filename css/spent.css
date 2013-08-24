@@ -118,3 +118,10 @@ x-flipbox{
 		display: none;
 	}
 }
+
+#report-content .value{
+	text-align: right;
+}
+#report-content .date{
+	text-align: center;
+}
