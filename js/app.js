@@ -57,3 +57,8 @@
 	});
 
 }());
+
+document.addEventListener('DOMComponentsLoaded', function(){
+	
+});
+
