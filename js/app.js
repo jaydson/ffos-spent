@@ -46,13 +46,13 @@
 		});
 	});
 
-	document.querySelector('#report').addEventListener('click', function () {
-		document.querySelector('#report-content').innerHTML = new Spent().getReport();
-	});
-
 }());
 
 document.addEventListener('DOMComponentsLoaded', function(){
+
+	document.querySelector('#report').addEventListener('click', function () {
+		document.querySelector('#report-content').innerHTML = new Spent().getReport();
+	});
 	
 });
 
