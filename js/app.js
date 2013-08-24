@@ -9,8 +9,14 @@
 		}
 
 		this.getReport = function () {
-			var data = localStorage.getItem(storageName);
-
+			var data = JSON.parse(localStorage.getItem(storageName)),
+				i = 0,
+				dataLen = data.length,
+				dataHTML = '';
+			for (i; i < dataLen; i += 1) {
+				dataHTML += "<tr><td>"+ data[i].date +"</td><td>"+ data[i].howmuch +"</td><td>"+ data[i].tags +"</td><td>"+ data[i].notes +"</td></tr>"
+			}
+			return dataHTML;
 		};
 
 		this.save = function (obj, cb) {
