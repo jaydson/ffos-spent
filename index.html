@@ -39,7 +39,7 @@
             </h1>
         </header>
     </section>
-    <x-flipbox>
+    <x-flipbox id="fBox">
         <div id="main" class="front-page">
             <p id="installation-instructions">Press the + button in the top right corner to install this app.</p>
             <form id="form-user">
@@ -50,6 +50,11 @@
                     <input type="radio" name="tags" value="market">Market</input>
                     <input type="radio" name="tags" value="fun">Fun</input>
                     <input type="radio" name="tags" value="others">Others</input>
+
+                    <div>
+                        Notes:
+                        <textarea id="notes"></textarea>
+                    </div>
                 </div>
                 <div>
                     <button id="ok">Ok</button>
@@ -59,6 +64,7 @@
         </div>
         <div class="back-page">
             <table border="1" id="report-content"></table>
+            <button id="flip-back">Back</button>
         </div>
     </x-flipbox>
 

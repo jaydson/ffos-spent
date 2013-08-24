@@ -9,7 +9,7 @@
 		}
 
 		this.getReport = function () {
-			var data = JSON.parse(localStorage.getItem(storageName)),
+			var data = JSON.parse(localStorage.getItem(storageName) || []),
 				i = 0,
 				dataLen = data.length,
 				dataHTML = '';
@@ -30,7 +30,7 @@
 		};		
 	};
 
-	document.querySelector('#ok').addEventListener('click', function () {
+	document.querySelector('#ok').addEventListener('click', function (event) {
 		var date = new Date();
 		var ispent = new Spent().save({
 			howmuch : document.querySelector('#howmuch').value,
@@ -50,15 +50,28 @@
 		}, function (status) {
 			document.querySelector('#form-user').reset();
 		});
+
+		event.preventDefault();
+		event.stopPropagation();
+	});
+
+
+	document.addEventListener('DOMComponentsLoaded', function(){
+
+		document.querySelector('#report').addEventListener('click', function (event) {
+			document.querySelector('#report-content').innerHTML = new Spent().getReport();
+			event.preventDefault();
+			event.stopPropagation();
+			document.getElementById('fBox').toggle();
+		});
+		document.getElementById('flip-back').addEventListener('click', function (event) {
+			event.preventDefault();
+			event.stopPropagation();
+			document.getElementById('fBox').toggle();
+		});
+		
 	});
 
 }());
 
-document.addEventListener('DOMComponentsLoaded', function(){
-
-	document.querySelector('#report').addEventListener('click', function () {
-		document.querySelector('#report-content').innerHTML = new Spent().getReport();
-	});
-	
-});
 
