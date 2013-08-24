@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/toolbars.css">
     <link href="building-blocks/style/input_areas.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/spent.css">
+    <link rel="stylesheet" type="text/css" href="css/brick-1.0beta5.byob.min.css">
     <title>Spent</title>
 </head>
 
@@ -38,28 +39,29 @@
             </h1>
         </header>
     </section>
-
-    <div id="main">
-        <p id="installation-instructions">Press the + button in the top right corner to install this app.</p>
-        <form id="form-user">
-            <div class="fields">             
-                <input type="number" placeholder="How much?" id="howmuch" autofocus="autofocus">
-                <input type="radio" name="tags" value="food" >Food</input>
-                <input type="radio" name="tags" value="transport">Transport</input>
-                <input type="radio" name="tags" value="market">Market</input>
-                <input type="radio" name="tags" value="fun">Fun</input>
-                <input type="radio" name="tags" value="others">Others</input>
-            </div>
+    <x-flipbox>
+        <div id="main" class="front-page">
+            <p id="installation-instructions">Press the + button in the top right corner to install this app.</p>
+            <form id="form-user">
+                <div class="fields">             
+                    <input type="number" placeholder="How much?" id="howmuch" autofocus="autofocus">
+                    <input type="radio" name="tags" value="food" >Food</input>
+                    <input type="radio" name="tags" value="transport">Transport</input>
+                    <input type="radio" name="tags" value="market">Market</input>
+                    <input type="radio" name="tags" value="fun">Fun</input>
+                    <input type="radio" name="tags" value="others">Others</input>
+                </div>
+                <div>
+                    Notes:
+                    <textarea id="notes" placholder="Notes"></textarea>
+                </div>        
+            </form>
             <div>
-                Notes:
-                <textarea id="notes" placholder="Notes"></textarea>
-            </div>        
-        </form>
-        <div>
-            <button id="ok">Ok</button>
-            <button id="report">Report</button>
-        </div>
-    </div>    
+                <button id="ok">Ok</button>
+                <button id="report">Report</button>
+            </div>
+        </x-flipbox>
+    </div>
 
     <footer>
         <div role="toolbar">
@@ -72,6 +74,7 @@
     <script type="text/javascript" src="js/base.js"></script>
     <script type="text/javascript" src="js/webapp.js"></script>
     <script type="text/javascript" src="js/offline.js"></script>
+    <script type="text/javascript" src="js/brick-1.0beta5.byob.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
     <!-- 
