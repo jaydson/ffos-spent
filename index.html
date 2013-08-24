@@ -46,13 +46,13 @@
                 <div class="fields">  
                     <form id="form-user">
                         <input type="number" placeholder="How much?" id="howmuch" autofocus="autofocus">
-                        <input type="radio" name="tags" value="food" >Food</input>
-                        <input type="radio" name="tags" value="transport">Transport</input>
-                        <input type="radio" name="tags" value="market">Market</input>
-                        <input type="radio" name="tags" value="fun">Fun</input>
-                        <input type="radio" name="tags" value="others">Others</input>
+                        <input id="food" type="radio" name="tags" value="food" ><label for="food">Food</label></input>
+                        <input id="transport" type="radio" name="tags" value="transport"><label for="transport">Transport</label></input>
+                        <input id="market" type="radio" name="tags" value="market"><label for="market">Market</label></input>
+                        <input id="fun" type="radio" name="tags" value="fun"><label for="fun">Fun</label></input>
+                        <input id="others" type="radio" name="tags" value="others"><label for="others">Others</label></input>
 
-                        <div>
+                        <div id="notes-container">
                             Notes:
                             <textarea id="notes"></textarea>
                         </div>
@@ -65,7 +65,7 @@
             
         </div>
         <div class="back-page">
-            <table border="1" id="report-content"></table>
+            <table class="CSSTableGenerator" border="1" id="report-content"></table>
             <button id="flip-back">Back</button>
         </div>
     </x-flipbox>

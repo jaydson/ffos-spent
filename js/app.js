@@ -14,7 +14,7 @@
 				dataLen = data.length,
 				dataHTML = '';
 			for (i; i < dataLen; i += 1) {
-				dataHTML += "<tr><td>"+ data[i].date +"</td><td>"+ data[i].howmuch +"</td><td>"+ data[i].tags +"</td><td>"+ data[i].notes +"</td></tr>"
+				dataHTML += "<tr><td>"+ data[i].date +"</td><td>"+ data[i].howmuch +"</td><td>"+ data[i].tags +"</td>"; //<td>"+ data[i].notes +"</td></tr>"
 			}
 			return dataHTML;
 		};
