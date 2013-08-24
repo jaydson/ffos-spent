@@ -42,25 +42,27 @@
     <x-flipbox id="fBox">
         <div id="main" class="front-page">
             <p id="installation-instructions">Press the + button in the top right corner to install this app.</p>
-            <form id="form-user">
-                <div class="fields">             
-                    <input type="number" placeholder="How much?" id="howmuch" autofocus="autofocus">
-                    <input type="radio" name="tags" value="food" >Food</input>
-                    <input type="radio" name="tags" value="transport">Transport</input>
-                    <input type="radio" name="tags" value="market">Market</input>
-                    <input type="radio" name="tags" value="fun">Fun</input>
-                    <input type="radio" name="tags" value="others">Others</input>
+            
+                <div class="fields">  
+                    <form id="form-user">
+                        <input type="number" placeholder="How much?" id="howmuch" autofocus="autofocus">
+                        <input type="radio" name="tags" value="food" >Food</input>
+                        <input type="radio" name="tags" value="transport">Transport</input>
+                        <input type="radio" name="tags" value="market">Market</input>
+                        <input type="radio" name="tags" value="fun">Fun</input>
+                        <input type="radio" name="tags" value="others">Others</input>
 
-                    <div>
-                        Notes:
-                        <textarea id="notes"></textarea>
-                    </div>
+                        <div>
+                            Notes:
+                            <textarea id="notes"></textarea>
+                        </div>
+                    </form>
                 </div>
                 <div>
-                    <button id="ok">Ok</button>
-                    <button id="report">Report</button>
+                    <button id="ok" value="Ok">Ok</button>
+                    <button id="report" value="Report">Report</button>
                 </div>
-            </form>
+            
         </div>
         <div class="back-page">
             <table border="1" id="report-content"></table>

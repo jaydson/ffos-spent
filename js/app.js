@@ -50,9 +50,6 @@
 		}, function (status) {
 			document.querySelector('#form-user').reset();
 		});
-
-		event.preventDefault();
-		event.stopPropagation();
 	});
 
 
@@ -60,13 +57,9 @@
 
 		document.querySelector('#report').addEventListener('click', function (event) {
 			document.querySelector('#report-content').innerHTML = new Spent().getReport();
-			event.preventDefault();
-			event.stopPropagation();
 			document.getElementById('fBox').toggle();
 		});
 		document.getElementById('flip-back').addEventListener('click', function (event) {
-			event.preventDefault();
-			event.stopPropagation();
 			document.getElementById('fBox').toggle();
 		});
 		
