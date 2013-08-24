@@ -39,25 +39,25 @@
         </header>
     </section>
 
-    <div>
-        <button>Ok</button>
-        <button>Ok</button>
-    </div>
-
     <div id="main">
         <p id="installation-instructions">Press the + button in the top right corner to install this app.</p>
-        <input type="text" placeholder="How much?" id="howmuch">
-        <input type="checkbox" id="">Food</input>
-        <input type="checkbox" id="">Transport</input>
-        <input type="checkbox" id="">Market</input>
-        <input type="checkbox" id="">Fun</input>
-        <input type="checkbox" id="">Others</input>
+        <div class="fields">
+            <input type="number" placeholder="How much?" id="howmuch" autofocus="autofocus">
+            <input type="checkbox" id="">Food</input>
+            <input type="checkbox" id="">Transport</input>
+            <input type="checkbox" id="">Market</input>
+            <input type="checkbox" id="">Fun</input>
+            <input type="checkbox" id="">Others</input>
+        </div>
         <div>
             Notes:
             <textarea id="notes" placholder="Notes"></textarea>
         </div>        
-        <div></div>
-    </div>
+
+        <div>
+            <button id="ok">Ok</button>
+        </div>
+    </div>    
 
     <footer>
         <div role="toolbar">
@@ -70,6 +70,7 @@
     <script type="text/javascript" src="js/base.js"></script>
     <script type="text/javascript" src="js/webapp.js"></script>
     <script type="text/javascript" src="js/offline.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
     <!-- 
         Loosely based on fxosstub: https://github.com/Jaxo/fxosstub
